@@ -18,7 +18,7 @@
     "archive",
     "automatic"
   ],
-  "main": "ec2-backup.coffee",
+  "bin": { "ec2-backup" : "./ec2-backup.coffee" },
   "dependencies": {
     "async": "~0.1.22",
     "underscore": "~1.4.2",
