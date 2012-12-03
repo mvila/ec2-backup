@@ -3,7 +3,7 @@
 Easy backup your EC2 instances.
 
 `ec2-backup` creates snapshots of all attached volumes of an EC2 instance
-and automatically purges snapshots which not correspond to:
+and automatically purges snapshots that not correspond to:
 
 * the last 10 days,
 * the last 10 mondays,
@@ -11,8 +11,6 @@ and automatically purges snapshots which not correspond to:
 
 **Important:** in order to properly select which snapshot to purge,
 `ec2-backup` should be run daily.
-
-Note: only snapshots created by `ec2-backup` are purgeable.
 
 ## Installation
 
