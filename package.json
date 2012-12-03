@@ -1,0 +1,33 @@
+{
+  "name": "ec2-backup",
+  "version": "0.0.1",
+  "description": "Easy backup your EC2 instances",
+  "author": "Manuel Vila <mvila@3base.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mvila/ec2-backup.git"
+  },
+  "keywords": [
+    "aws",
+    "ec2",
+    "backup",
+    "ebs",
+    "volume",
+    "snapshot",
+    "archive",
+    "automatic"
+  ],
+  "main": "ec2-backup.coffee",
+  "dependencies": {
+    "async": "~0.1.22",
+    "underscore": "~1.4.2",
+    "aws-lib": "~0.1.4",
+    "request": "~2.12.0",
+    "moment": "~1.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
