@@ -122,8 +122,6 @@ getMetadata (metadata) ->
     devices = itemToArray instance.blockDeviceMapping.item
     async.forEachSeries devices, (device, next) ->
       volumeId = device.ebs.volumeId
-      console.log volumeId
-      return next()
       getVolume volumeId, (volume) ->
         createSnapshot volume, ->
           getPurgeableSnapshots volume, (snapshots) ->
