@@ -1,6 +1,6 @@
 {
   "name": "ec2-backup",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Easy backup your EC2 instances",
   "author": "Manuel Vila <mvila@3base.com>",
   "license": "MIT",

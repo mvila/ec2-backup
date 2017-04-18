@@ -10,7 +10,7 @@ async = require 'async'
 
 log = (type, msg) ->
   date = moment().format 'YYYY-MM-DDTHH:mm:ss'
-  console[type] "#{date} [#{type}] #{msg}"  
+  console[type] "#{date} [#{type}] #{msg}"
 info = (msg) -> log 'info', msg
 error = (msg) -> log 'error', msg
 
@@ -51,7 +51,7 @@ itemToObject = (item) ->
   obj = {}
   obj[prop.key] = prop.value for prop in item
   obj
-  
+
 getMetadata (metadata) ->
   ec2 = createEC2Client metadata.region
 
@@ -86,7 +86,7 @@ getMetadata (metadata) ->
         done snapshotId
 
   getPurgeableSnapshots = (volume, done) ->
-    options = 
+    options =
       'Owner': 'self'
       'Filter.1.Name': 'status'
       'Filter.1.Value': 'completed'
@@ -98,9 +98,9 @@ getMetadata (metadata) ->
       throw new Error 'unable to get existing snapshots' if err
       snapshots = itemToArray result.snapshotSet.item
       purgeableSnapshots = []
-      tenDaysAgo = moment().subtract 'days', 10
-      tenWeeksAgo = moment().subtract 'weeks', 10
-      tenMonthsAgo = moment().subtract 'months', 10
+      tenDaysAgo = moment().subtract 10, 'days'
+      tenWeeksAgo = moment().subtract 10, 'weeks'
+      tenMonthsAgo = moment().subtract 10, 'months'
       for snapshot in snapshots
         date = moment snapshot.startTime
         continue if date.diff(tenDaysAgo) > 0 # 10 last days
