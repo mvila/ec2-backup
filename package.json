@@ -1,6 +1,6 @@
 {
   "name": "ec2-backup",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Easy backup your EC2 instances",
   "author": "Manuel Vila <mvila@3base.com>",
   "license": "MIT",
@@ -18,13 +18,15 @@
     "archive",
     "automatic"
   ],
-  "bin": { "ec2-backup": "./ec2-backup.coffee" },
+  "bin": {
+    "ec2-backup": "./ec2-backup.coffee"
+  },
   "dependencies": {
-    "async": "~0.1.22",
-    "underscore": "~1.4.2",
-    "aws-lib": "~0.1.4",
-    "request": "~2.12.0",
-    "moment": "~1.7.2"
+    "async": "^2.3.0",
+    "aws-lib": "^0.3.0",
+    "moment": "^2.18.1",
+    "request": "^2.81.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {},
   "scripts": {
